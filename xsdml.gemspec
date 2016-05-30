@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "cucumber", "~> 2.1"
   s.add_development_dependency "rspec", "~> 3.4"
-  s.add_development_dependency "nokogiri", "~> "
+  s.add_development_dependency "nokogiri", "~> 1.6", ">= 1.6.7"
   s.add_development_dependency "rake", "~> 11.0"
   s.add_development_dependency "coveralls", "~> 0.7"
 
