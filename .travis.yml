@@ -3,6 +3,8 @@ rvm:
   - 2.3.1
   - 2.2.2
   - 2.1.8
+env:
+  - COVERAGE=true
 sudo: false
 branches:
   only:
