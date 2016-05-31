@@ -9,5 +9,5 @@ end
 Then(/^the output should match the schema$/) do
   xsd = Nokogiri::XML::Schema(@schema)
   doc = Nokogiri::XML(@output)
-  expect{ xsd.validate(doc) }.not_to raise_error
+  expect(xsd.valid?(doc)).to be true
 end
