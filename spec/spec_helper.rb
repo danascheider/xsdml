@@ -3,6 +3,7 @@ Coveralls.wear! if ENV["COVERAGE"] == "true"
 
 dir = File.dirname(__FILE__)
 lib = File.join(dir, "../lib")
+
 Dir.foreach(lib) {|f| require f if f.match(/\.rb$/) }
 
 RSpec.configure do |config|

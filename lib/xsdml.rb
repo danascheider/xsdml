@@ -1,7 +1,5 @@
+path = File.join(File.dirname(__FILE__), "**/*")
+Dir[path].each {|f| require f if f.match(/\.rb$/) }
+
 module XSDML
-  class Generator
-    def self.generate!(schema)
-      "<?xml version=\"1.1\" encoding=\"UTF-8\" ?>\n<foo>bar</foo>"
-    end
-  end
 end
