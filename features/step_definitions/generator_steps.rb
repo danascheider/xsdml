@@ -7,5 +7,7 @@ When(/^I run the XML data generator$/) do
 end
 
 Then(/^the output should match the schema$/) do
-  expect{ @schema.validate(@output) }.not_to raise_error
+  xsd = Nokogiri::XML::Schema(@schema)
+  doc = Nokogiri::XML(@output)
+  expect{ xsd.validate(doc) }.not_to raise_error
 end
