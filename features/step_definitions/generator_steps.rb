@@ -3,7 +3,7 @@ Given(/^the following XML schema:$/) do |schema|
 end
 
 When(/^I run the XML data generator$/) do
-  @output = XSDML.generate!(@schema)
+  @output = XSDML::Generator.generate!(@schema)
 end
 
 Then(/^the output should match the schema$/) do
